@@ -3,7 +3,6 @@ import './App.css';
 import Table from './components/Table';
 import AddForm from './components/AddForm';
 import EditForm from './components/EditForm';
-import Navbar from './components/Navbar'; // Import komponen Navbar
 
 const BASE_URL = 'https://localhost:7025/api/CRUD';
 
@@ -106,7 +105,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar /> {/* Tambahkan komponen Navbar di sini */}
       <h1>Daftar Barang</h1>
       <>
         <AddForm formData={formData} setFormData={setFormData} handleAddData={handleAddData} />
