@@ -1,8 +1,8 @@
-import React from 'react';
+// ... Kode sebelumnya ...
 
 const Table = ({ barang, handleDeleteData, handleShowModal }) => {
   return (
-    <table class="table table-striped">
+    <table className="table table-striped">
       <thead>
         <tr>
           <th>No</th>
@@ -20,9 +20,10 @@ const Table = ({ barang, handleDeleteData, handleShowModal }) => {
             <td>{item.deskripsi}</td>
             <td>{item.stock}</td>
             <td>
-              <button type="button" class="btn btn-warning" onClick={() => handleShowModal(item)}>Edit</button>
+              <button type="button" className="btn btn-warning mr-2" onClick={() => handleShowModal(item)}>Edit</button>
+              {/* Tambahkan class "mr-2" untuk memberi margin kanan */}
               
-              <button type="button" class="btn btn-primary" onClick={() => handleDeleteData(item.id_barang)}>Hapus</button>
+              <button type="button" className="btn btn-primary" onClick={() => handleDeleteData(item.id_barang)}>Hapus</button>
             </td>
           </tr>
         ))}
